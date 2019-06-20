@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: monospace;
+  font-size: 100%;
+  line-height: 1.5em;
+  background: wheat;
+}
+.clearfix:before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 0.9em;
+  text-transform: uppercase;
+  padding: 0.5em;
+}
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li,
+div.button {
+  display: block;
+  width: 100%;
+  background: #555555;
+  text-align: center;
+  font-size: 1.2em;
+}
+div.button {
+  height: 4em;
+  background: red;
+}
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: red;
+  height: 3em;
+}
+
+nav ul li a:hover:not(.active) {
+  border: 2px solid black;
+  border-radius: 0.5em;
+}
+
+.active {
+  color: green;
+  border: 0.2em solid green;
+  border-radius: 0.2em;
+}
+
+header {
+  background-image: url("/images/beans.jpg");
+  background-size: cover;
+  padding: 3em;
+  text-align: center;
+  color: white;
+  border-bottom: 0.5em solid chocolate;
+}
+
+header section h1 {
+  font-size: 8em;
+  padding-top: 0.5em;
+  margin-bottom: 0.75em;
+}
+
+header p {
+  margin-top: 1em;
+  font-size: 2em;
+  font-family: fantasy;
+  line-height: 1.2em;
+  margin-bottom: 1em;
+}
+
+a.btn {
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase;
+  background: red;
+  color: black;
+  margin: 1em;
+  padding: 2em;
+  border-radius: 2em;
+  text-decoration: none;
+}
+a.btn:hover {
+  background: black;
+  color: white;
+}
+blockquote {
+  padding: 1em;
+  background: dark khaki;
+  font-size: 2em;
+  line-height: 1.2em;
+  text-align: center;
+}
+.titles {
+  padding: 1em;
+  line-height: 3em;
+  text-align: center;
+  text-transform: capitalize;
+  background: pink;
+}
+.articles {
+  margin: 2em;
+}
+.articles section {
+  text-align: center;
+}
+.articles section p {
+  text-align: justify;
+  line-height: 2em;
+}
+.red {
+  color: red;
+  line-height: 1.2em;
+}
+.black {
+  color: black;
+}
+.articles section img {
+  width: 100%;
+  border-radius: 5px;
+}
+footer#second {
+  background: chocolate;
+  padding: 2em;
+  text-align: center;
+  color: red;
+  line-height: 3em;
+  text-transform: uppercase;
+  margin: 1em;
+  text-shadow: 0.2em 0.2em black;
+  border-radius: 0.5em;
+}
+
+@media screen and (min-width: 600px) {
+  nav {
+    background: #555555;
+  }
+  nav ul li {
+    display: inline-block;
+    width: 24vw;
+  }
+  .articles section {
+    float: left;
+    width: 30%;
+    margin: 1.5%;
+  }
+  .articles section:last-child {
+    margin-right: 0;
+  }
+  .articles section img {
+    height: 15em;
+  }
+  .articles section p {
+    height: 22em;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 200px) {
+  .small section {
+    float: left;
+    width: 30%;
+    margin: 1.5%;
+  }
+  .small section h2 {
+    font-size: 1.5em;
+  }
+}
